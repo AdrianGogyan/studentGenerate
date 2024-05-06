@@ -3,6 +3,10 @@ let studentsObj;
 document.addEventListener("DOMContentLoaded", function(){
 
     studentsObj  = JSON.parse(localStorage.getItem("studentsObj")) || { studentData: [] } ;
+    //---< addon for a proplematic "Uncaught TypeError" message 
+    if (!Array.isArray(studentsObj.studentsData)) {
+        studentsObj.studentsData = [];
+    }
     console.log(studentsObj.studentsData);
 
     displayAllStudents();
