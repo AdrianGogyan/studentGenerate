@@ -2,7 +2,7 @@ let studentsObj;
 
 document.addEventListener("DOMContentLoaded", function(){
 
-    studentsObj  = JSON.parse(localStorage.getItem("studentsObj")) || { studentData: [] } ;
+    studentsObj  = JSON.parse(localStorage.getItem("studentsObj")) || { studentsData: [] } ;
     //---< addon for a proplematic "Uncaught TypeError" message 
     if (!Array.isArray(studentsObj.studentsData)) {
         studentsObj.studentsData = [];
